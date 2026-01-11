@@ -78,3 +78,18 @@ ECR_REPO
 PINECONE_API_KEY
 
 OPENAI_API_KEY
+
+
+### command to run docker file 
+
+docker run -d \
+  --name rag-app \
+  --restart always \
+  -p 8080:8080 \
+  -e AWS_ACCESS_KEY_ID="$AWS_ACCESS_KEY_ID" \
+  -e AWS_SECRET_ACCESS_KEY="$AWS_SECRET_ACCESS_KEY" \
+  -e AWS_DEFAULT_REGION="$AWS_DEFAULT_REGION" \
+  -e PINECONE_API_KEY="$PINECONE_API_KEY" \
+  -e OPENAI_API_KEY="$OPENAI_API_KEY" \
+  -e GROK_API_KEY="$GROK_API_KEY" \
+  97619362129.dkr.ecr.ap-south-1.amazonaws.com/arsmeetchatbot:latest
