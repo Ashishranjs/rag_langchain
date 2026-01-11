@@ -1,6 +1,7 @@
 # rag_langchain
 Built a LangChain-based RAG application using Pinecone for semantic search, deployed on AWS with Docker, ECR, and IAM, showcasing cloud-native LLM application development.
-Create a .env file in the root directory and add your Pinecone & openai credentials as follows:
+
+#Create a .env file in the root directory and add your Pinecone & openai credentials as follows:
 PINECONE_API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 OPENAI_API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 # run the following command to store embeddings to pinecone
