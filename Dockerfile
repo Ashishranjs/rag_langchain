@@ -2,8 +2,21 @@ FROM python:3.10-slim-buster
 
 WORKDIR /app
 
-COPY . /app
+# System dependencies required by sentence-transformers / torch
+RUN apt-get update && apt-get install -y \
+    gcc \
+    g++ \
+    git \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
 
-RUN pip install -r requirements.txt
+# Copy only requirements first (better caching)
+COPY requirements.txt .
 
-CMD ["python3", "app.py"]
+# Upgrade pip and install deps
+RUN pip install --upgrade pip && pip install -r requirements.txt
+
+# Copy application code
+COPY . .
+
+CMD ["python", "app.py"]
