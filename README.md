@@ -3,6 +3,7 @@ Built a LangChain-based RAG application using Pinecone for semantic search, depl
 
 #Create a .env file in the root directory and add your Pinecone & openai credentials as follows:
 PINECONE_API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
 OPENAI_API_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 # run the following command to store embeddings to pinecone
 python store_index.py
@@ -67,8 +68,13 @@ newgrp docker
 setting>actions>runner>new self hosted runner> choose os> then run command one by one
 7. Setup github secrets:
 AWS_ACCESS_KEY_ID
+
 AWS_SECRET_ACCESS_KEY
+
 AWS_DEFAULT_REGION
+
 ECR_REPO
+
 PINECONE_API_KEY
+
 OPENAI_API_KEY
