@@ -16,7 +16,7 @@ import os
 app = Flask(__name__)
 
 # ✅ ENABLE CORS (safe for future frontend usage)
-CORS(app, origins=["http://localhost:5173", "https://videocalling-rag-frontend.vercel.app"])
+CORS(app, origins=["http://localhost:5173", "https://arsmeet.vercel.app"])
 
 load_dotenv()
 
